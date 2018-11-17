@@ -55,23 +55,16 @@ ylabel('Magnitude(dB)')
 axis([0 10000 -15 15])
 line([800 800], ylim, 'Color',[1 0 0])
 
-output1_freq_index = [0:length(output1)-1] * (fs / length(output1));
-output2_freq_index = [0:length(output2)-1] * (fs / length(output2));
+impulse_freq_index = [0:length(output)-1] * (fs / length(length);
 
 output1_spectrum = 20 .* log10(abs(fft(output1)));
 figure
-plot(output1_freq_index , output1_spectrum)
-title('Spectrum of Output Signal 1')
+plot(impulse_freq_index, response1_spectrum)
 xlabel('Frequency(Hz)')
 ylabel('Magnitude(dB)')
-axis([0 10000 -15 100])
 
 output2_spectrum = 20 .* log10(abs(fft(output2)));
 figure
-plot(output2_freq_index , output2_spectrum)
-title('Spectrum of Output Signal 2')
 xlabel('Frequency(Hz)')
 ylabel('Magnitude(dB)')
-axis([0 10000 -15 100])
-
 
